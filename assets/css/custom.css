@@ -9,7 +9,7 @@ a{
 a:hover, a:focus{
 	transition:all 0.5s;
 	text-decoration:none;
-	color:#980200;
+	color:#6B1427;
 }
 h1{
 	color:#143A6B;
@@ -20,6 +20,7 @@ h1{
 	margin-bottom:40px;
 	font-family: 'Oswald', sans-serif;
 	text-align:center;
+	text-transform:uppercase;
 }
 h1:before{
 	background:url(../images/headerLeft.png);
@@ -44,8 +45,10 @@ h2{
 	font-family: 'Oswald', sans-serif;
 }
 h3{
-	font-size:24px;
+	font-size:36px;
 	font-weight:normal;
+	color:#13396B;
+		font-family: 'Oswald', sans-serif;
 }
 p{
 	font-size:20px;
@@ -54,15 +57,16 @@ p{
 		font-family: 'Oswald', sans-serif;
     color: #fff;
     background:url(../images/btnBg.png) right center no-repeat #143A6B;
-	background-size:100%;
+	background-size:50%;
     border-radius:0;
     font-size:20px;
     font-weight: 300;
-    padding:10px 15px;
+    padding:10px 30px;
 }
 .btn-default:hover {
-	   background:#143A6B;
-	   color:#fff;
+ 	background:url(../images/btnBg.png) right center no-repeat #143A6B;
+	background-size:75%;
+	color:#fff;
 }
 
 
@@ -289,8 +293,15 @@ header.blue .main_logo{
         background-color: transparent;
     }
 .genContent{
-	padding:30px;
+	padding:50px;
 	text-align:center;
+	background:url(../images/largebackdrop.png) 130% center no-repeat;
+		background-attachment:fixed;
+}
+.genContent p{
+	font-size:30px;
+	font-weight:300;
+	margin-bottom:20px;
 }
 
 .genContent .btn-default {
@@ -299,7 +310,7 @@ header.blue .main_logo{
 .features{
 	background:url(../images/featuresBg.png);
 	background-attachment:fixed;
-	padding:30px;
+		padding:50px;
 }
 .features .nav-tabs li{
 	font-size:36px;
@@ -309,7 +320,14 @@ header.blue .main_logo{
 }
 .features .nav-tabs.nav-justified > li > a{
 	border-radius:0;
-	border-bottom:0;
+	border:0;
+}
+.features .nav-tabs.nav-justified > li > a:hover, .features .nav-tabs.nav-justified > li > a:focus{
+	border-radius:0;
+	border:0;
+	background:none;
+	outline:none;
+	color:#fff;
 }
 .features .nav-tabs li.engineering{
 	background:#143A6B;
@@ -324,4 +342,260 @@ header.blue .main_logo{
 	background-color:transparent;
 	border:none;
 	color:#fff;
+}
+.features .tab-content{
+	overflow:hidden;
+	color:#fff;
+}
+.features .tab-content #engineering{
+	border-top:5px #143A6B solid;
+	padding:15px;
+}
+.features .tab-content #prototyping{
+	border-top:5px #6B6114 solid;
+	padding:15px;
+}
+.features .tab-content #research{
+	border-top:5px #6B1427 solid;
+	padding:15px;
+}
+.features .tab-content #engineering img{
+	border-radius:100%;
+	border:3px #143A6B solid;
+	height:340px; 
+}
+.features .tab-content #prototyping img{
+	border-radius:100%;
+	border:3px #6B6114 solid; 
+		height:340px;
+}
+.features .tab-content #research img{
+	border-radius:100%;
+	border:3px #6B1427 solid; 
+		height:340px;
+}
+.services{
+	padding:50px;
+	text-align:center;
+	background:url(../images/largebackdrop.png) -30% center no-repeat;
+	background-attachment:fixed;
+}
+.services .btn-default{
+	float:left;
+	margin-top:10px;
+}
+/*Horizontal Accordian Specifics*/
+.accordionjs {
+  margin: 0 auto;
+  padding: 0;
+  height: 500px;
+  width: 101%;
+  overflow: hidden;
+  list-style: none;
+}
+
+  .accordionjs > li {
+    margin-right: -1200px;
+    margin-bottom: 0px;
+    padding-left: 0;
+	background:#fff;
+  }
+
+/*
+** The tabs of the accordion are made up of 3 main elements.
+** 1) <input radiobox />
+** 2) <div /> text title of the box
+** 3) <i>  FontAwesome styled checkbox to show the state.
+*/
+.accordionjs-select {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* BEGIN accordionjs-title rules */
+.accordionjs-title {
+
+}
+
+  .accordionjs-title span {
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      white-space: nowrap;
+      margin-bottom: 20px; 
+      margin-left: 0px;
+      line-height: 40px;
+      /* Slider effect */
+      transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -ms-writing-mode: lr-bt;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  }
+
+  .accordionjs-title i {
+    color                               : #ffffff;
+    margin-right                        : 10px;
+    font-size                           : 18px;
+	display:none;
+  }
+/* END accordionjs-title rules */
+
+/* BEGIN accordionjs-content rules */
+.accordionjs-content {
+    background-color: #F0F2F2;
+    color: #333;
+    height: 404px;
+    width: 1104px;
+    padding: 48px;
+    position: relative;
+    overflow: auto;
+}
+/* END accordionjs-content rules */
+
+.accordionjs > li,
+.accordionjs-title,
+.accordionjs-content,
+.accordionjs-separator {
+  float: left;
+  text-align:left;
+}
+
+
+.accordionjs-select:checked ~ .accordionjs-separator {
+  margin-right: 1200px;
+  margin-bottom: 0px;
+}
+
+.accordionjs-title, .accordionjs-select  {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    width: 80px; 
+    height: 500px;
+    font-size: 36px;
+	text-align:center;
+		font-family: 'Oswald', sans-serif;
+		font-weight:300;
+}
+.blue .accordionjs-title{
+	background:#13396B;
+}
+.brown .accordionjs-title{
+	background:#6B6114;
+}
+.red .accordionjs-title{
+	background:#6B1427;
+}
+
+/* Dark-Blue colour for currently active steps. */
+.accordionjs-select:hover ~ .accordionjs-title, .accordionjs-select:checked ~ .accordionjs-title {
+    
+}
+
+.accordionjs-title, .accordionjs-select:checked ~ .accordionjs-content {
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+/* Do not change following properties, they aren't 
+generated automatically and are common for each slider. */
+
+.accordionjs > li, .accordionjs-title {
+    position: relative;
+}
+
+
+
+
+.accordionjs-separator {
+    transition: margin 0.3s ease 0.1s;
+    -o-transition: margin 0.3s ease 0.1s;
+    -moz-transition: margin 0.3s ease 0.1s;
+    -webkit-transition: margin 0.3s ease 0.1s;
+}
+
+/*---------------------------------------------------*/
+.clients{
+		padding:50px;
+	text-align:center;
+	background:url(../images/clientsBg.png) center no-repeat;
+	background-attachment:fixed;
+}
+.clients h1{
+	color:#fff;
+}
+.clients .owl-carousel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.clients .owl-carousel .item {
+}
+.clients .owl-nav {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+.clients .owl-nav .fa {
+  color: #fff;
+  font-size: 35px;
+}
+.clients .owl1 .owl-nav .fa {
+  color: #980200;
+  font-size: 35px;
+}
+.clients .owl-carousel .owl-nav button.owl-next {
+  float: right;
+  margin-right: -30px;
+}
+.clients .owl-carousel .owl-nav button.owl-prev {
+  float: left;
+  margin-left: -30px;
+}
+.clients .owl-dots {
+  display: none;
+}
+footer{
+	padding:30px 0 10px 0;
+	text-align:left;
+}
+footer a{
+	color:#666;
+	font-size:18px;
+}
+footer .social a{
+	margin-left:10px;
+}
+footer p{
+	font-size:18px;
+	margin-top:10px;
+}
+footer h1{
+	text-align:left;
+	margin-bottom:0;
+}
+footer h1:before{
+	display:none;
+}
+footer h1:after{
+	display:none;}
+footer .footer-right{
+	border-left:1px #666 solid;
+	text-align:right;
+}
+.footer-bottom{
+	border-top:1px #666 solid;
+	padding:10px 0;
+	font-size:12px;
+	margin-top:30px;
+	
+}
+.footer-bottom a{
+		font-size:12px;
 }
