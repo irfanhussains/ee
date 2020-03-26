@@ -384,6 +384,7 @@ header.blue .main_logo{
 	float:left;
 	margin-top:10px;
 }
+
 /*Horizontal Accordian Specifics*/
 .accordionjs {
   margin: 0 auto;
@@ -598,4 +599,87 @@ footer .footer-right{
 }
 .footer-bottom a{
 		font-size:12px;
+}
+.services .panel-default > .panel-heading{
+	  font-size: 36px;
+color:#fff;
+		font-family: 'Oswald', sans-serif;
+		font-weight:300;
+		border:none;
+}
+.services .panel-group .panel{
+	border-radius:0;
+}
+.services .panel-default > .panel-heading.blue{
+	background:#13396B;
+}
+.services .panel-default > .panel-heading.brown{
+	background:#6B6114;
+}
+.services .panel-default > .panel-heading.red{
+	background:#6B1427;
+}
+
+.services .panel-title{
+	font-size:24px;
+}
+.services .panel-body p{
+	text-align:left;
+}
+.services .panel-title > a:focus{
+	color:#fff;
+}
+@media (max-width: 768px){
+	h1 {
+    font-size: 24px;
+	}
+	h1:before, h1:after {
+		width: 60px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+	}
+	.genContent p {
+		font-size: 20px;
+	}
+	.owlSlider{
+		padding:50px;
+	}
+	.genContent, .features, .services, .clients{
+		padding:15px;
+	}
+	.clients .owl-nav{
+		display:none;
+	}
+	.banner .content {
+		margin-top: 30%;
+		left:0;
+	}
+}
+@media (max-width: 767px){
+	
+	h1:before, h1:after{
+		display:none;
+	}
+	.banner .content {
+    margin-top: 50%;}
+	.banner .content .text{
+		font-size:58px;
+	}
+	.banner .content .text .size3{
+		font-size:124px;
+		line-height:129px;
+	}
+	.banner .content .text .size2 {
+    font-size: 30px;
+	}
+	.banner .content .text .size4 {
+    font-size: 27px;
+}
+footer .footer-right{
+	border-left:none;
+	padding:20px 0 0 0;
+	border-top:1px #666 solid;
+	text-align:left;
+}
 }
